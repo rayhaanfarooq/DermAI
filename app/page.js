@@ -1,68 +1,19 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Feather, Shield, Zap, MessageCircle } from "lucide-react"
 import Link from 'next/link'
-import { useRouter } from "next/navigation";
+import Header from "@/components/ui/header"
+
 
 export default function EnhancedDermAILanding() {
-  const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
 
-  const handleSignIn = () => {
-    router.push("/auth/signin");
-  };
 
-  const handleDashboard = () => {
-    router.push("/home");
-  }
-
-  const handleSignUp = () => {
-    router.push("/auth/signup");
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    document.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde] text-[#36454F]">
-      <header className={`fixed w-full px-4 lg:px-6 h-16 flex items-center justify-between transition-all duration-300 ${scrolled ? 'bg-white/70 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
-        <Link className="flex items-center justify-center" href="#">
-          <Feather className="h-8 w-8 mr-2 text-[#FF7F50]" />
-          <span className="font-bold text-xl text-[#FF7F50]">DermAI</span>
-        </Link>
-        <nav className="flex gap-6">
-
-        <Link className="text-sm font-medium hover:text-[#FF7F50] transition-colors" href="/">
-            Home
-          </Link>
-          <Link href="/home" className="text-sm font-medium hover:text-[#FF7F50] transition-colors">
-            Features
-          </Link>
-
-        
-          <Link href="/auth/signin" className="text-sm font-medium hover:text-[#FF7F50] transition-colors" >
-            Sign In
-          </Link>
-
-          <Link href="/auth/signup" className="text-sm font-medium hover:text-[#FF7F50] transition-colors">
-            Sign Up
-          </Link>
-         
-        </nav>
-      </header>
+     <Header />
       <main className="flex-1 pt-16">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-[#ADD8E6] via-[#98FF98] to-[#E6E6FA]">
           <div className="container mx-auto px-4 md:px-6">
