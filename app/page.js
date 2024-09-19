@@ -37,20 +37,22 @@ export default function EnhancedDermAILanding() {
   }, [scrolled]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#ADD8E6] via-[#98FF98] to-[#E6E6FA] text-[#36454F]">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde] text-[#36454F]">
       <header className={`fixed w-full px-4 lg:px-6 h-16 flex items-center justify-between transition-all duration-300 ${scrolled ? 'bg-white/70 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
         <Link className="flex items-center justify-center" href="#">
           <Feather className="h-8 w-8 mr-2 text-[#FF7F50]" />
           <span className="font-bold text-xl text-[#FF7F50]">DermAI</span>
         </Link>
         <nav className="flex gap-6">
+
+        <Link className="text-sm font-medium hover:text-[#FF7F50] transition-colors" href="/">
+            Home
+          </Link>
           <Link href="/home" className="text-sm font-medium hover:text-[#FF7F50] transition-colors">
             Features
           </Link>
 
-          <Link className="text-sm font-medium hover:text-[#FF7F50] transition-colors" href="#">
-            About
-          </Link>
+        
           <Link href="/auth/signin" className="text-sm font-medium hover:text-[#FF7F50] transition-colors" >
             Sign In
           </Link>
@@ -74,7 +76,9 @@ export default function EnhancedDermAILanding() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button href="/home" className="bg-[#FF7F50] text-white hover:bg-white hover:text-[#FF7F50] hover:border-[#FF7F0] transition-colors">Start Chatting</Button>
+                <Link href="/home">
+                <Button className="bg-[#FF7F50] text-white hover:bg-white hover:text-[#FF7F50] hover:border-[#FF7F0] transition-colors">Start Chatting</Button>
+                </Link>
                 <Button variant="outline" className="text-[#FF7F50] hover:bg-[#FF7F50] hover:text-white transition-colors">Learn More</Button>
               </div>
             </div>

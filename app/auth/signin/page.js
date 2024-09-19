@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from "@/hooks/auth";
+import Header from "../../../components/ui/header";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
@@ -34,8 +35,13 @@ export default function Signin() {
   };
 
   return (
+
+    <div>
+      <Header />
     <div className="flex flex-col justify-center items-center min-h-screen w-full bg-gradient-to-br from-[#ADD8E6] via-[#98FF98] to-[#E6E6FA] text-[#36454F] px-4">
+     
       <div className="w-full max-w-md p-8 backdrop-blur-lg bg-white/30 rounded-lg shadow-xl">
+      
         <h1 className="text-3xl font-bold text-center mb-6 text-[#2F4F4F]">Sign In</h1>
         {errorMessage && (
           <div className="bg-[#FF7F50]/50 border border-[#FF7F50] text-[#36454F] px-4 py-3 rounded relative mb-4" role="alert">
@@ -99,6 +105,7 @@ export default function Signin() {
           </button>
         </p>
       </div>
+    </div>
     </div>
   );
 }

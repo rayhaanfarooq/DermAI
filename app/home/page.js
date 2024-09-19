@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
-import Header from "../components/Header";
+import Header from "../../components/ui/header";
 import Link from "next/link";
 import Feather from "lucide-react";
 
@@ -23,10 +23,10 @@ export default function ChatbotPage() {
   ]);
   const [input, setInput] = useState("");
 
-  useEffect(() => {
-    if (loading) return;
-    if (!user) return router.push("/auth/login");
-  }, [user, loading, router]);
+  // useEffect(() => {
+  //   if (loading) return;
+  //   if (!user) return router.push("/auth/signin");
+  // }, [user, loading, router]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -77,46 +77,9 @@ export default function ChatbotPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#ADD8E6] via-[#98FF98] to-[#E6E6FA]">
-      {/* <header
-        className={`fixed w-full px-4 lg:px-6 h-16 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "bg-white/70 backdrop-blur-lg shadow-md" : "bg-transparent"
-        }`}
-      >
-        <Link className="flex items-center justify-center" href="#">
-          <Feather className="h-8 w-8 mr-2 text-[#FF7F50]" />
-          <span className="font-bold text-xl text-[#FF7F50]">DermAI</span>
-        </Link>
-        <nav className="flex gap-6">
-          <Link
-            href="/home"
-            className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
-          >
-            Features
-          </Link>
-
-          <Link
-            className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
-            href="#"
-          >
-            About
-          </Link>
-          <Link
-            href="/auth/signin"
-            className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
-          >
-            Sign In
-          </Link>
-
-          <Link
-            href="/auth/signup"
-            className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
-          >
-            Sign Up
-          </Link>
-        </nav>
-      </header> */}
-      {/* <Header /> */}
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde]">
+     
+      <Header />
       <main className="flex-grow flex items-center justify-center px-4 py-8">
         <Card className="w-full max-w-2xl mx-auto backdrop-blur-lg bg-white/30 shadow-xl">
           <CardHeader>

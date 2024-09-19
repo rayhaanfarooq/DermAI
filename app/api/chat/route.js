@@ -53,15 +53,17 @@ export async function POST(req) {
 })
 
 
-
   const stream = new ReadableStream({
     async start(controller) {
       const encoder = new TextEncoder()
       try {
         for await (const chunk of completion) {
+
           const content = chunk.choices[0]?.delta?.content
           if (content) {
+
             const text = encoder.encode(content)
+           
             controller.enqueue(text);
           }
         }
@@ -72,6 +74,8 @@ export async function POST(req) {
       }
     },
   });
+
+
 
   return new NextResponse(stream);
 }
