@@ -73,12 +73,12 @@ export default function EnhancedDermAILanding() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <form className="flex space-x-2">
+                {/* <form className="flex space-x-2">
                   <Input className="max-w-lg flex-1 bg-white text-[#36454F] placeholder-[#B0C4DE]" placeholder="Enter your email" type="email" />
                   <Button type="submit" className="bg-[#FF7F50] text-white hover:bg-[#FFC0CB] transition-colors">Get Started</Button>
-                </form>
+                </form> */}
                 <p className="text-xs text-[#36454F]">
-                  By signing up, you agree to our Terms of Service and Privacy Policy.
+                  You should not be required to login but if you do, use the following Email: test@hotmail.com Password: testtest
                 </p>
               </div>
             </div>
