@@ -50,14 +50,14 @@ export default function Header({ loggedIn }) {
           className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
           href="/"
         >
-          Home
+          Landing Page
         </Link>
 
         <Link
           href="/home"
           className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
         >
-          Features
+          Start Chat
         </Link>
 
         {user ? (
