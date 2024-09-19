@@ -60,6 +60,13 @@ export default function Header({ loggedIn }) {
           Start Chat
         </Link>
 
+        <Link
+          href="/pricing"
+          className="text-sm font-medium hover:text-[#FF7F50] transition-colors"
+        >
+          Pricing
+        </Link>
+
         {user ? (
           <button
             onClick={handleLogout}

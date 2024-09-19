@@ -38,7 +38,7 @@ export default function Signin() {
 
     <div>
       <Header />
-    <div className="flex flex-col justify-center items-center min-h-screen w-full bg-gradient-to-br from-[#ADD8E6] via-[#98FF98] to-[#E6E6FA] text-[#36454F] px-4">
+    <div className="flex flex-col justify-center items-center min-h-screen w-full bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde] text-[#36454F] px-4">
      
       <div className="w-full max-w-md p-8 backdrop-blur-lg bg-white/30 rounded-lg shadow-xl">
       
