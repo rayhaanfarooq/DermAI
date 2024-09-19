@@ -5,10 +5,13 @@ import { Shield, Zap, MessageCircle } from "lucide-react"
 import Link from 'next/link'
 import Header from "@/components/ui/header"
 import { Card, CardContent } from "@/components/ui/card"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function EnhancedDermAILanding() {
   return (
+    
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde] text-[#2F4F4F]">
+      <Analytics />
       <Header />
       <main className="flex-1 pt-16">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-[#a0e7ff] via-[#98FF98] to-[#b48fde]">
@@ -94,5 +97,6 @@ export default function EnhancedDermAILanding() {
         </div>
       </footer>
     </div>
+   
   )
 }
